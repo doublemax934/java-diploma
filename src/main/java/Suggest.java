@@ -1,11 +1,26 @@
 public class Suggest {
-    private final String keyWord;
-    private final String title;
-    private final String url;
+    private String keyWord;
+    private String title;
+    private String url;
 
     public Suggest(String keyWord, String title, String url) {
         this.keyWord = keyWord;
         this.title = title;
+        this.url = url;
+    }
+
+    public Suggest() {
+    }
+
+    public void setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setUrl(String url) {
         this.url = url;
     }
 
@@ -19,5 +34,12 @@ public class Suggest {
 
     public String getUrl() {
         return url;
+    }
+
+    @Override
+    public String toString() {
+        return keyWord + '\'' +
+                title + '\'' +
+                url + '\'';
     }
 }
